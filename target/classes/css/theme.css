@@ -1,0 +1,441 @@
+/* ============================================
+   Photo Manager Pro - Theme System
+   Light Theme (Default) + Dark Theme Override
+   ============================================ */
+
+/* ===== Light Theme (Default) ===== */
+.root {
+    -pm-primary: #1976D2;
+    -pm-primary-light: #42A5F5;
+    -pm-primary-dark: #1565C0;
+    -pm-accent: #F44336;
+    -pm-success: #4CAF50;
+    -pm-warning: #FF9800;
+
+    -pm-bg-main: #F5F5F5;
+    -pm-bg-card: #FFFFFF;
+    -pm-bg-toolbar: #FFFFFF;
+    -pm-bg-statusbar: #FFFFFF;
+    -pm-bg-sidebar: #F0F0F0;
+    -pm-bg-sidebar-hover: #E0E0E0;
+    -pm-bg-input: #F0F0F0;
+
+    -pm-text-primary: #212121;
+    -pm-text-secondary: #757575;
+    -pm-text-sidebar: #212121;
+    -pm-text-sidebar-dim: #757575;
+
+    -pm-border: #E0E0E0;
+    -pm-border-light: #EEEEEE;
+
+    -pm-selection-fill: rgba(25, 118, 210, 0.12);
+    -pm-selection-stroke: rgba(25, 118, 210, 0.75);
+
+    -pm-shadow: rgba(0, 0, 0, 0.06);
+    -pm-shadow-hover: rgba(0, 0, 0, 0.12);
+    -pm-shadow-selected: rgba(25, 118, 210, 0.3);
+}
+
+/* ===== Dark Theme ===== */
+.root.dark-theme {
+    -pm-primary: #42A5F5;
+    -pm-primary-light: #64B5F6;
+    -pm-primary-dark: #1976D2;
+    -pm-accent: #EF5350;
+    -pm-success: #66BB6A;
+    -pm-warning: #FFA726;
+
+    -pm-bg-main: #121212;
+    -pm-bg-card: #1E1E1E;
+    -pm-bg-toolbar: #1E1E1E;
+    -pm-bg-statusbar: #1E1E1E;
+    -pm-bg-sidebar: #1A1A1A;
+    -pm-bg-sidebar-hover: #2C2C2C;
+    -pm-bg-input: #2C2C2C;
+
+    -pm-text-primary: #FFFFFF;
+    -pm-text-secondary: #B0B0B0;
+    -pm-text-sidebar: #E0E0E0;
+    -pm-text-sidebar-dim: #9E9E9E;
+
+    -pm-border: #424242;
+    -pm-border-light: #333333;
+
+    -pm-selection-fill: rgba(66, 165, 245, 0.15);
+    -pm-selection-stroke: rgba(66, 165, 245, 0.8);
+
+    -pm-shadow: rgba(0, 0, 0, 0.3);
+    -pm-shadow-hover: rgba(0, 0, 0, 0.5);
+    -pm-shadow-selected: rgba(66, 165, 245, 0.4);
+}
+
+/* ===== Toolbar ===== */
+.toolbar {
+    -fx-background-color: -pm-bg-toolbar;
+    -fx-border-color: -pm-border;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10 20;
+}
+
+.toolbar-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -pm-text-primary;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.toolbar-badge {
+    -fx-background-color: -pm-primary;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 10;
+    -fx-background-radius: 10;
+}
+
+/* ===== Toolbar Buttons ===== */
+.toolbar-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -pm-text-primary;
+    -fx-font-size: 11px;
+    -fx-font-weight: 500;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-padding: 6 12;
+    -fx-cursor: hand;
+    -fx-background-radius: 6;
+}
+
+.toolbar-btn:hover {
+    -fx-background-color: derive(-pm-bg-main, -5%);
+}
+
+.toolbar-btn:pressed {
+    -fx-background-color: derive(-pm-bg-main, -10%);
+}
+
+/* ===== Status Bar ===== */
+.status-bar {
+    -fx-background-color: -pm-bg-statusbar;
+    -fx-border-color: -pm-border;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 10 20;
+}
+
+.status-bar .label {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-text-fill: -pm-text-primary;
+}
+
+.status-hint {
+    -fx-font-size: 10px;
+    -fx-text-fill: -pm-text-secondary;
+}
+
+.status-badge {
+    -fx-background-color: -pm-primary;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 4 12;
+    -fx-background-radius: 10;
+}
+
+/* ===== Thumbnail Cards ===== */
+.thumbnail-card {
+    -fx-background-color: -pm-bg-card;
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+    -fx-border-width: 2.5;
+    -fx-border-radius: 10;
+    -fx-padding: 8;
+}
+
+.thumbnail-card-name {
+    -fx-font-size: 10px;
+    -fx-text-fill: -pm-text-secondary;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.thumbnail-card-size {
+    -fx-font-size: 9px;
+    -fx-text-fill: -pm-text-secondary;
+    -fx-opacity: 0.7;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    -fx-background-color: -pm-bg-sidebar;
+}
+
+.sidebar-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-text-fill: -pm-text-sidebar;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-letter-spacing: 1;
+}
+
+.sidebar-header {
+    -fx-background-color: -pm-bg-sidebar;
+    -fx-border-color: -pm-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+.sidebar-scroll {
+    -fx-background: -pm-bg-sidebar;
+    -fx-background-color: -pm-bg-sidebar;
+    -fx-padding: 0;
+}
+
+.sidebar-address {
+    -fx-background-color: -pm-bg-sidebar-hover;
+    -fx-text-fill: -pm-text-sidebar;
+    -fx-prompt-text-fill: -pm-text-sidebar-dim;
+    -fx-font-size: 12px;
+    -fx-font-family: 'Consolas', 'Monaco', monospace;
+    -fx-padding: 7 10;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
+    -fx-border-radius: 6;
+}
+
+.sidebar-btn-folder {
+    -fx-background-color: -pm-bg-sidebar-hover;
+    -fx-text-fill: -pm-text-sidebar-dim;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-radius: 6 0 0 6;
+    -fx-padding: 0;
+}
+
+.sidebar-btn-go {
+    -fx-background-color: -pm-primary;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-radius: 0 6 6 0;
+    -fx-padding: 0;
+}
+
+.sidebar-btn-go:hover {
+    -fx-background-color: -pm-primary-dark;
+}
+
+/* ===== Tree Cell ===== */
+.tree-cell-dir {
+    -fx-background-color: transparent;
+    -fx-text-fill: -pm-text-sidebar;
+    -fx-font-size: 13px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-weight: 500;
+}
+
+.tree-cell-file {
+    -fx-background-color: transparent;
+    -fx-text-fill: -pm-text-sidebar-dim;
+    -fx-font-size: 13px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.tree-cell-hover {
+    -fx-background-color: -pm-bg-sidebar-hover;
+    -fx-background-radius: 6;
+    -fx-text-fill: -pm-text-sidebar;
+}
+
+/* ===== Context Menu ===== */
+.context-menu {
+    -fx-background-color: -pm-bg-card;
+    -fx-border-color: -pm-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 5);
+}
+
+.context-menu .menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: -pm-text-primary;
+    -fx-padding: 6 20;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 12px;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: derive(-pm-bg-main, -5%);
+    -fx-text-fill: -pm-primary;
+}
+
+/* ===== Scroll Pane ===== */
+.scroll-pane {
+    -fx-background: -pm-bg-main;
+    -fx-background-color: -pm-bg-main;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: -pm-bg-main;
+}
+
+.scroll-pane > .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: derive(-pm-bg-main, -20%);
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: derive(-pm-bg-main, -30%);
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* ===== Dialog ===== */
+.dialog-pane {
+    -fx-background-color: -pm-bg-card;
+    -fx-text-fill: -pm-text-primary;
+}
+
+.dialog-pane .content {
+    -fx-text-fill: -pm-text-primary;
+}
+
+.dialog-pane .button {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-weight: 600;
+    -fx-padding: 7 20;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button:default {
+    -fx-background-color: -pm-primary;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button:default:hover {
+    -fx-background-color: -pm-primary-dark;
+}
+
+/* ===== Popup / Hover Preview ===== */
+.hover-popup {
+    -fx-background-color: -pm-bg-card;
+    -fx-text-fill: -pm-text-primary;
+    -fx-border-color: -pm-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 12, 0, 0, 5);
+    -fx-padding: 12 16;
+    -fx-font-size: 11px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Primary Action Button ===== */
+.btn-primary {
+    -fx-background-color: -pm-primary;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-font-size: 11px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-padding: 7 16;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+}
+
+.btn-primary:hover {
+    -fx-background-color: -pm-primary-dark;
+}
+
+/* ===== Split Pane ===== */
+.split-pane {
+    -fx-background-color: -pm-bg-main;
+}
+
+.split-pane-divider {
+    -fx-background-color: -pm-border;
+    -fx-padding: 0 1 0 0;
+}
+
+.split-pane-divider:hover {
+    -fx-background-color: -pm-primary;
+}
+
+/* ===== Tree View ===== */
+.tree-view {
+    -fx-background-color: transparent;
+    -fx-selection-bar: -pm-primary;
+    -fx-selection-bar-non-focused: -pm-primary-light;
+}
+
+/* ===== Separator ===== */
+.separator .line {
+    -fx-border-color: -pm-border;
+    -fx-border-width: 1;
+}
+
+/* ===== ComboBox ===== */
+.combo-box {
+    -fx-background-color: transparent;
+    -fx-text-fill: -pm-text-primary;
+    -fx-font-size: 11px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-padding: 4 8;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
+    -fx-border-radius: 6;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: -pm-text-primary;
+    -fx-background-color: transparent;
+    -fx-font-size: 11px;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.combo-box .list-cell:filled:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: -pm-text-primary;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: -pm-text-primary;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: -pm-bg-card;
+    -fx-border-color: -pm-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 5);
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: -pm-text-primary;
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: derive(-pm-bg-main, -5%);
+    -fx-text-fill: -pm-primary;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: -pm-primary;
+    -fx-text-fill: white;
+}

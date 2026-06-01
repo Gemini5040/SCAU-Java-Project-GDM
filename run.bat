@@ -18,6 +18,8 @@ if not exist "lib" (
 )
 
 echo [1/2] Compiling...
+if not exist "target\classes\css" mkdir "target\classes\css"
+xcopy /Y /Q "src\main\resources\css\*" "target\classes\css\"
 javac -encoding UTF-8 -d target\classes -sourcepath src\main\java src\main\java\com\example\demo\PhotoManagerApp.java -cp "lib\javafx-base-21.0.2.jar;lib\javafx-graphics-21.0.2.jar;lib\javafx-controls-21.0.2.jar;lib\javafx-fxml-21.0.2.jar"
 
 if errorlevel 1 (
